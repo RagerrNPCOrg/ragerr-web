@@ -5,7 +5,7 @@ services:
     ##image: emenoh/gt-dev-app
     command: npm run start-dev
     ports:
-     - '3010:3010'
+     - '5010:5010'
     volumes:
      - ../app:/app
      - ../api:/api
