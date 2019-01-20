@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app:
+    build: ../app
+    ##image: emenoh/gt-dev-app
+    command: npm run start-dev
+    ports:
+     - '5010:5010'
+    volumes:
+     - ../app:/app
+     - ../api:/api
+    links:
+     - redis
+    depends_on:
+     - redis
+  redis:
+    build: ../redis
+    ##image: 'redis:alpine'
